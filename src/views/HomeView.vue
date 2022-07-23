@@ -60,6 +60,11 @@ export default {
       return data;
     },
     getCountryData(country) {
+      if (typeof country === "undefined") {
+        this.clearCountryData();
+        return;
+      }
+      console.log(country);
       this.stats = country;
       this.title = country.Country;
     },
